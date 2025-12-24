@@ -1,3 +1,9 @@
+document.getElementById("start").addEventListener("click", () => {
+  bgm1.currentTime = 0;
+  bgm1.play();
+});
+
+
 function startBgm() {
   if (bgmStarted) return;
 
@@ -189,4 +195,5 @@ function init() {
 }
 
 init();
+
 
