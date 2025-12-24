@@ -1,3 +1,13 @@
+function startBgm() {
+  if (bgmStarted) return;
+
+  bgm1.muted = true;
+  bgm1.play().then(() => {
+    bgm1.muted = false;
+    bgmStarted = true;
+  }).catch(() => {});
+}
+
 const WIDTH = 16;
 const HEIGHT = 30;
 const MINES = 99;
@@ -179,3 +189,4 @@ function init() {
 }
 
 init();
+
