@@ -1,3 +1,17 @@
+canvas.addEventListener("click", e => {
+
+  if (!bgmStarted) {
+    bgm1.currentTime = 0;
+    bgm1.play();
+    bgmStarted = true;
+  }
+
+  if (gameOver) return;
+
+  // 以降、既存の左クリック処理
+});
+
+
 document.getElementById("start").addEventListener("click", () => {
   bgm1.currentTime = 0;
   bgm1.play();
@@ -195,5 +209,6 @@ function init() {
 }
 
 init();
+
 
 
