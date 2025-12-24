@@ -1,0 +1,36 @@
+body {
+  background: #000;
+  user-select: none;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  width: 640px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-image: url("image_a.jpg");
+  background-size: 640px 1200px;
+  border: 1px solid #333;
+  font-weight: bold;
+  color: black;
+  text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open {
+  background-image: url("image_b.jpg");
+}
+
+.flag::after {
+  content: "🚩";
+}
